@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import { AuthContext } from '../Contexts/AuthContext';
 import Swal from 'sweetalert2';
 
-const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:3000';
+const API_BASE = import.meta.env.VITE_API_URL || 'https://libri-sphere-server.vercel.app';
 
 const SubscriptionForm = () => {
     const { user } = useContext(AuthContext);

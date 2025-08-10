@@ -12,6 +12,7 @@ import BookDetails from "../Pages/BookDetails";
 import NotFound from "../Pages/NotFound";
 import UpdatedBook from "../Pages/UpdatedBook";
 import SearchResults from "../Components/SearchResult";
+import Loading from "../Components/Loading";
 
 export const router = createBrowserRouter([
     {
@@ -22,27 +23,34 @@ export const router = createBrowserRouter([
                 index: true,
                 Component: Home,
                 loader: () => fetch("https://libri-sphere-server.vercel.app/books"),
+                hydrateFallbackElement: <Loading />
+
             },
             {
                 path: 'all-books',
                 element: <PrivateRoute><AllBooks /></PrivateRoute>,
                 loader: () => fetch("https://libri-sphere-server.vercel.app/books"),
+                hydrateFallbackElement: <Loading />
 
             },
             {
                 path: "/search",
-                element: <SearchResults/>
+                element: <SearchResults />,
+                hydrateFallbackElement: <Loading />
+
             },
             {
                 path: 'books/:category',
                 element: <PrivateRoute><CategoryDetails /></PrivateRoute>,
-                loader: ({params})=>fetch(`https://libri-sphere-server.vercel.app/books/${params.category}`)
+                loader: ({ params }) => fetch(`https://libri-sphere-server.vercel.app/books/${params.category}`),
+                hydrateFallbackElement: <Loading />
 
             },
             {
                 path: 'books/:category/:id',
                 element: <PrivateRoute><BookDetails /></PrivateRoute>,
-                loader: ({params})=>fetch(`https://libri-sphere-server.vercel.app/books/${params.category}/${params.id}`)
+                loader: ({ params }) => fetch(`https://libri-sphere-server.vercel.app/books/${params.category}/${params.id}`),
+                hydrateFallbackElement: <Loading />,
             },
             {
                 path: 'add-books',
@@ -51,12 +59,14 @@ export const router = createBrowserRouter([
             {
                 path: 'update-book/:id',
                 element: <PrivateRoute><UpdatedBook /></PrivateRoute>,
-                loader: ({params})=>fetch(`https://libri-sphere-server.vercel.app/books/${params.category}/${params.id}`)
+                loader: ({ params }) => fetch(`https://libri-sphere-server.vercel.app/books/${params.category}/${params.id}`),
+                hydrateFallbackElement: <Loading />
             },
             {
                 path: 'borrowed-books',
                 element: <PrivateRoute><BorrowBook /></PrivateRoute>,
-                loader: ()=>fetch('https://libri-sphere-server.vercel.app/borrowed-books'),
+                loader: () => fetch('https://libri-sphere-server.vercel.app/borrowed-books'),
+                hydrateFallbackElement: <Loading />
             },
             {
                 path: 'login',
@@ -71,6 +81,6 @@ export const router = createBrowserRouter([
     },
     {
         path: "/*",
-        Component:NotFound
+        Component: NotFound
     }
 ])

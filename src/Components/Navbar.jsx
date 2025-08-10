@@ -1,5 +1,5 @@
 import React, { use, useState } from 'react';
-import { navLink4Header } from './Navlink';
+// import { navLink4Header } from './Navlink';
 import { CgProfile } from 'react-icons/cg';
 import { Link, Links, NavLink } from 'react-router';
 import { CiLight } from 'react-icons/ci';
@@ -10,9 +10,16 @@ import { Tooltip } from 'react-tooltip';
 import Swal from 'sweetalert2';
 
 const Navbar = ({ theme, setTheme }) => {
-    const [menu, setMenu] = useState(false);
+        const { user, loading, logOut, setLoading } = use(AuthContext)
 
-    const { user, loading, logOut, setLoading } = use(AuthContext)
+    const navLink4Header =
+    <ul className="flex gap-2 lg:gap-6 flex-col lg:flex-row">
+        <li><NavLink viewTransition className='btn btn-outline btn-secondary w-full shadow-lg lg:shadow-none lg:w-auto' to='/'>Home</NavLink></li>
+        <li><NavLink viewTransition className='btn btn-outline btn-secondary w-full shadow-lg lg:shadow-none lg:w-auto' to='/all-books'>All Books</NavLink></li>
+        <li><NavLink viewTransition className={`${user? '' : 'hidden'} btn btn-outline btn-secondary w-full shadow-lg lg:shadow-none lg:w-auto`} to='/add-books'>Add Book</NavLink></li>
+        <li><NavLink viewTransition className={`${user? '' : 'hidden'} btn btn-outline btn-secondary w-full shadow-lg lg:shadow-none lg:w-auto`} to='/borrowed-books'>Borrowed Books</NavLink></li>
+    </ul>
+    const [menu, setMenu] = useState(false);
 
     const handleLogout = () => {
         setLoading(true)
@@ -64,7 +71,7 @@ const Navbar = ({ theme, setTheme }) => {
             <div className='hidden lg:block mr-2'>
                 {navLink4Header}
             </div>
-            <label className="input border-2 border-secondary mr-2 -z-20">
+            <label className={`${user? '' : 'hidden'} input border-2 border-secondary mr-2 -z-20`}>
                 <svg className="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                     <g
                         strokeLinejoin="round"

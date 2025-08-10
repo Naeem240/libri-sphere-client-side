@@ -11,6 +11,10 @@ function useQuery() {
 }
 
 export default function SearchResults() {
+    // Jump to Top
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [])
     const [books, setBooks] = useState([]);
     const [loading, setLoading] = useState(false);
 
@@ -37,7 +41,7 @@ export default function SearchResults() {
     return (
         <div className="p-6">
             <h2 className="text-xl mb-4">Search results for "{q}" — {books.length}</h2>
-            {loading && <div><Loading/></div>}
+            {loading && <div><Loading /></div>}
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                 {books.map((book) => (
                     <article key={book._id} className="bg-white p-4 rounded shadow">

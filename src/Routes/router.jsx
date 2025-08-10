@@ -1,0 +1,71 @@
+import { createBrowserRouter } from "react-router";
+import HomeLayout from '../LayOuts/HomeLayout';
+import Home from '../Pages/Home';
+import AllBooks from '../Pages/AllBooks';
+import AddBook from '../Pages/AddBook';
+import BorrowBook from '../Pages/BorrowBook';
+import Login from "../Pages/Login";
+import Register from "../Pages/Register";
+import PrivateRoute from "./PrivateRoute";
+import CategoryDetails from "../Pages/CategoryDetails";
+import BookDetails from "../Pages/BookDetails";
+import NotFound from "../Pages/NotFound";
+import UpdatedBook from "../Pages/UpdatedBook";
+
+export const router = createBrowserRouter([
+    {
+        path: '/',
+        Component: HomeLayout,
+        children: [
+            {
+                index: true,
+                Component: Home,
+                loader: () => fetch("https://libri-sphere-server.vercel.app/books"),
+            },
+            {
+                path: 'all-books',
+                element: <PrivateRoute><AllBooks /></PrivateRoute>,
+                loader: () => fetch("https://libri-sphere-server.vercel.app/books"),
+
+            },
+            {
+                path: 'books/:category',
+                element: <PrivateRoute><CategoryDetails /></PrivateRoute>,
+                loader: ({params})=>fetch(`https://libri-sphere-server.vercel.app/books/${params.category}`)
+
+            },
+            {
+                path: 'books/:category/:id',
+                element: <PrivateRoute><BookDetails /></PrivateRoute>,
+                loader: ({params})=>fetch(`https://libri-sphere-server.vercel.app/books/${params.category}/${params.id}`)
+            },
+            {
+                path: 'add-books',
+                element: <PrivateRoute><AddBook /></PrivateRoute>,
+            },
+            {
+                path: 'update-book/:id',
+                element: <PrivateRoute><UpdatedBook /></PrivateRoute>,
+                loader: ({params})=>fetch(`https://libri-sphere-server.vercel.app/books/${params.category}/${params.id}`)
+            },
+            {
+                path: 'borrowed-books',
+                element: <PrivateRoute><BorrowBook /></PrivateRoute>,
+                loader: ()=>fetch('https://libri-sphere-server.vercel.app/borrowed-books'),
+            },
+            {
+                path: 'login',
+                Component: Login,
+            },
+            {
+                path: 'register',
+                Component: Register,
+            },
+
+        ]
+    },
+    {
+        path: "/*",
+        Component:NotFound
+    }
+])

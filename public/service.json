@@ -1,0 +1,26 @@
+[
+    {
+      "id": "001",
+      "name": "Total Books",
+      "totalNumber": 894,
+      "image": "/success-doctor.png"
+    },
+    {
+      "id": "002",
+      "name": "Total Categories",
+      "totalNumber": 104,
+      "image": "/success-review.png"
+    },
+    {
+      "id": "003",
+      "name": "Total Languages",
+      "totalNumber": 58,
+      "image": "/success-patients.png"
+    },
+    {
+      "id": "004",
+      "name": "Total Benefited",
+      "totalNumber": 257,
+      "image": "/success-staffs.png"
+    }
+  ]

@@ -1,0 +1,122 @@
+[
+  {
+    "bookId": "IBB001",
+    "image": "https://wafilife-media.wafilife.com/uploads/2023/12/AR-RAHIKUL-MAKHTUM-250x386.png",
+    "name": "Ar-Raheeq Al-Makhtum (The Sealed Nectar)",
+    "quantity": 50,
+    "authorName": "Safiur Rahman Mubarakpuri",
+    "category": "Biography of Prophet Muhammad (PBUH)",
+    "shortDescription": "A comprehensive and authentic biography of the Prophet Muhammad (peace be upon him), widely acclaimed and awarded.",
+    "rating": 4.9,
+    "addButton": "Add to Cart",
+    "bookContent": "Available for purchase only."
+  },
+  {
+    "bookId": "IBB002",
+    "image": "https://wafilife-media.wafilife.com/uploads/2023/12/Stories-of-The-Prophets-SAM-copy-250x387.jpg",
+    "name": "Stories of the Prophets",
+    "quantity": 35,
+    "authorName": "Hafiz Ibn Kathir",
+    "category": "Islamic History & Stories",
+    "shortDescription": "A collection of stories of the prophets mentioned in the Quran, based on authentic Islamic sources.",
+    "rating": 4.8,
+    "addButton": "Add to Cart",
+    "bookContent": "Available for purchase only."
+  },
+  {
+    "bookId": "IBB003",
+    "image": "https://wafilife-media.wafilife.com/uploads/2021/03/HISNUL-MUSLIM-250x390.jpg",
+    "name": "Hisnul Muslim (Fortress of the Muslim)",
+    "quantity": 120,
+    "authorName": "Sa'id bin Ali bin Wahf Al-Qahtani",
+    "category": "Supplications & Adhkar",
+    "shortDescription": "A popular compilation of essential Quranic and Prophetic supplications for various occasions.",
+    "rating": 4.7,
+    "addButton": "Add to Cart",
+    "bookContent": "Available for purchase only."
+  },
+  {
+    "bookId": "IBB004",
+    "image": "https://wafilife-media.wafilife.com/uploads/2017/02/paradoxical-sajid-1-250x390.jpg",
+    "name": "Paradoxical Sajid (Vol. 1)",
+    "quantity": 80,
+    "authorName": "Arif Azad",
+    "category": "Contemporary Islamic Thought",
+    "shortDescription": "A collection of essays addressing common misconceptions and questions about Islam in a modern context.",
+    "rating": 4.6,
+    "addButton": "Add to Cart",
+    "bookContent": "Available for purchase only."
+  },
+  {
+    "bookId": "IBB005",
+    "image": "https://wafilife-media.wafilife.com/uploads/2017/12/22310282_882754751877047_9084184471593250677_n-250x250.jpg",
+    "name": "Riyadh-us-Saliheen (Gardens of the Righteous)",
+    "quantity": 25,
+    "authorName": "Imam An-Nawawi",
+    "category": "Hadith Collection",
+    "shortDescription": "A widely revered compilation of Hadith (sayings and actions of Prophet Muhammad) covering various aspects of life.",
+    "rating": 4.9,
+    "addButton": "Add to Cart",
+    "bookContent": "Available for purchase only."
+  },
+  {
+    "bookId": "IBB006",
+    "image": "https://wafilife-media.wafilife.com/uploads/2024/09/20240908_232712-250x403.jpg",
+    "name": "The Clear Quran",
+    "quantity": 40,
+    "authorName": "Dr. Mustafa Khattab",
+    "category": "Quranic Translation & Tafsir",
+    "shortDescription": "A contemporary and easy-to-understand translation of the Holy Quran.",
+    "rating": 4.7,
+    "addButton": "Add to Cart",
+    "bookContent": "Available for purchase only."
+  },
+  {
+    "bookId": "IBB007",
+    "image": "https://wafilife-media.wafilife.com/uploads/2015/02/125-GreatWomen_3DNew.jpg",
+    "name": "Great Women of Islam",
+    "quantity": 30,
+    "authorName": "Mahmood Ahmad Ghadanfar",
+    "category": "Islamic History & Biographies",
+    "shortDescription": "Biographies of notable women in Islamic history who played significant roles in the early days of Islam.",
+    "rating": 4.5,
+    "addButton": "Add to Cart",
+    "bookContent": "Available for purchase only."
+  },
+  {
+    "bookId": "IBB008",
+    "image": "https://wafilife-media.wafilife.com/uploads/2020/01/productive-muslim-Converted-04-scaled-250x385.jpg",
+    "name": "The Productive Muslim",
+    "quantity": 60,
+    "authorName": "Faris Mohammad",
+    "category": "Self-Help & Spirituality",
+    "shortDescription": "A practical guide for Muslims to achieve productivity and spiritual growth in their daily lives.",
+    "rating": 4.6,
+    "addButton": "Add to Cart",
+    "bookContent": "Available for purchase only."
+  },
+  {
+    "bookId": "IBB009",
+    "image": "https://booktankbd.com/cdn/shop/files/a9e321f3-286a-4d16-9cfb-fc0f936365c1.jpg",
+    "name": "Lessons from Surah al-Kahf",
+    "quantity": 20,
+    "authorName": "Dr. Yasir Qadhi",
+    "category": "Quranic Studies",
+    "shortDescription": "An in-depth analysis and lessons derived from Surah Al-Kahf, a significant chapter in the Holy Quran.",
+    "rating": 4.8,
+    "addButton": "Add to Cart",
+    "bookContent": "Available for purchase only."
+  },
+  {
+    "bookId": "IBB010",
+    "image": "https://wafilife-media.wafilife.com/uploads/2020/08/IMG-20200708-WA0048-250x375.jpg",
+    "name": "Revive Your Heart",
+    "quantity": 45,
+    "authorName": "Nouman Ali Khan",
+    "category": "Spirituality & Reflection",
+    "shortDescription": "Inspiring reflections and insights to re-ignite one's faith and connect with the Quran.",
+    "rating": 4.7,
+    "addButton": "Add to Cart",
+    "bookContent": "Available for purchase only."
+  }
+]

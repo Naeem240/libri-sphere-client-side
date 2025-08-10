@@ -14,7 +14,7 @@
   name: "dark";
   /* default: true; */
   --color-primary: blue;
-  --color-secondary: teal;
+  --color-secondary: #89CFF0;
   --color-accent: black;
 }
 

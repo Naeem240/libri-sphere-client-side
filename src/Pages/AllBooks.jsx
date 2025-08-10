@@ -19,7 +19,7 @@ const AllBooks = () => {
             <div className=' relative my-4 text-secondary border-b-2 pb-4 font-bold '>
                 <h1 className='text-3xl text-center'>Find Your Books</h1>
             </div>
-            <BookList allBooks={allBooks} showFilter = {true} />
+            <BookList allBook={allBooks} showFilter = {true} />
         </div>
     );
 };

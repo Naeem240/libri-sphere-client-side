@@ -8,6 +8,7 @@ import { AiOutlineMenuUnfold } from 'react-icons/ai';
 import { AuthContext } from '../Contexts/AuthContext';
 import { Tooltip } from 'react-tooltip';
 import Swal from 'sweetalert2';
+import SearchBox from './SearchBox';
 
 const Navbar = ({ theme, setTheme }) => {
         const { user, loading, logOut, setLoading } = use(AuthContext)
@@ -70,38 +71,8 @@ const Navbar = ({ theme, setTheme }) => {
             </Link>
             <div className='hidden lg:block mr-2'>
                 {navLink4Header}
-            </div>
-            <label className={`${user? '' : 'hidden'} input border-2 border-secondary mr-2 -z-20`}>
-                <svg className="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                    <g
-                        strokeLinejoin="round"
-                        strokeLinecap="round"
-                        strokeWidth="2.5"
-                        fill="none"
-                        stroke="currentColor"
-                    >
-                        <circle cx="11" cy="11" r="8"></circle>
-                        <path d="m21 21-4.3-4.3"></path>
-                    </g>
-                </svg>
-                <form className='w-12/12 flex items-center justify-between' action="">
-                    <input className='w-full' type="search" required placeholder="Search Books Here..." />
-                    <button className='border btn btn-secondary shadow-none -mr-4' type='submit'>
-                        <svg className="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <g
-                                strokeLinejoin="round"
-                                strokeLinecap="round"
-                                strokeWidth="2.5"
-                                fill="none"
-                                stroke="currentColor"
-                            >
-                                <circle cx="11" cy="11" r="8"></circle>
-                                <path d="m21 21-4.3-4.3"></path>
-                            </g>
-                        </svg>
-                    </button>
-                </form>
-            </label>
+            </div>           
+            <div><SearchBox user = {user}/></div>
             <div className='flex items-center gap-2 pr-4'>
                 {
                     loading ?

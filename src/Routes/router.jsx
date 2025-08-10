@@ -11,6 +11,7 @@ import CategoryDetails from "../Pages/CategoryDetails";
 import BookDetails from "../Pages/BookDetails";
 import NotFound from "../Pages/NotFound";
 import UpdatedBook from "../Pages/UpdatedBook";
+import SearchResults from "../Components/SearchResult";
 
 export const router = createBrowserRouter([
     {
@@ -27,6 +28,10 @@ export const router = createBrowserRouter([
                 element: <PrivateRoute><AllBooks /></PrivateRoute>,
                 loader: () => fetch("https://libri-sphere-server.vercel.app/books"),
 
+            },
+            {
+                path: "/search",
+                element: <SearchResults/>
             },
             {
                 path: 'books/:category',
